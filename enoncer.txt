@@ -1,0 +1,8 @@
+Voici un exercice pour débutant qui combine l'ajout d'éléments au DOM et l'utilisation de boucles. Il s'agit de créer une liste d'éléments dynamiquement à partir d'un tableau et de l'afficher sur la page.
+
+Objectif :
+-Utiliser une boucle pour parcourir un tableau.
+-Ajouter dynamiquement des éléments dans le DOM.
+-Manipuler le DOM avec appendChild.
+
+Exercice : Liste dynamique de tâches
