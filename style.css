@@ -6,3 +6,7 @@
     text-align: center;
     text-decoration: underline 0.5px ;
 }
+
+.list h2 {
+    text-decoration: underline;
+}
