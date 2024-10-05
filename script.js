@@ -43,7 +43,8 @@ taskBtn.addEventListener("click", () =>{
         // On met à jour la list à l'écran (voilà pourquoi on l'a déclaré avant)
         listOnDisplay();
         // Enfin, on réinitialise l'input
-        inputTask.value = ""; 
+        inputTask.value = "";
+        // par contre si notre input est vide
     }else{
         alert("Veuillez rentrer une nouvelle Tâche avant d'ajouter à la liste")
     }
