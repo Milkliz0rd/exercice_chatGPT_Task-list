@@ -13,25 +13,24 @@ const taskList = document.querySelector("#taskList");
 const taskBtn = document.querySelector("#addTaskBtn");
 // ajout de la variable de notre input
 
-
 //-------------------------Création de la Liste DOM---------------------------
 
 // On affiche les éléments de la list dans le DOM
 
     // On efface la liste actuelle
 
-    // On récupère les élements de la liste "Item" 
+    // On récupère les élements de la "list" grace à une fonction "item"
 
-        // On créé les "li" 
+        // On créé les "li" avec "listItem"
 
         // On ajoute "item" à nos "li"
 
         // On rattache nos "li" à notre parent "taskList"
-
+  
 // --------------On ajoute de nouvelles tâches à notre list-------------------
 
     // On met un élément d'écoute sur notre btn 
-
+ 
     // notre btn va récupérer la valeur de notre inputTask puis la nettoyer
 
     // On ajoute une condition si notre input à un contenue 
@@ -43,7 +42,7 @@ const taskBtn = document.querySelector("#addTaskBtn");
         // Enfin, on réinitialise l'input
       
         // par contre si notre input est vide
-
+ 
 //-----------------------------------------------------------------------------
 
 //on affiche la liste initiale au chargement de la page
