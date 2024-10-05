@@ -1,3 +1,11 @@
+//Crétation du Titre de la page
+const pageTitle = document.querySelector(".title")
+const title = document.createElement("h1");
+title.innerText = "La liste de Tâches d'Alex";
+console.log(pageTitle);
+pageTitle.appendChild(title);
+console.log(title);
+
 // Creation d'une liste prédéfinie
 const list = ["Faire mes cours","Aller au sport","Faire mes courses","Nettoyer le sol","Faire des gâteaux"];
 // création des variables disponible sur le dom
