@@ -7,42 +7,61 @@ pageTitle.appendChild(title);
 
 
 // Creation d'une liste prédéfinie
-const list = ["Faire mes cours","Aller au sport","Faire mes courses","Nettoyer le sol","Faire des gâteaux"];
+const list = [];
 // création des variables disponible sur le dom
 const taskList = document.querySelector("#taskList");
 const taskBtn = document.querySelector("#addTaskBtn");
 // ajout de la variable de notre input
-
+const inputTask = document.querySelector("#input-tsk")
 //-------------------------Création de la Liste DOM---------------------------
 
 // On affiche les éléments de la list dans le DOM
-
+function addListOnDisplay () {
     // On efface la liste actuelle
-
+    taskList.innerHTML="";
     // On récupère les élements de la "list" grace à une fonction "item"
-
+    list.forEach(item => {
         // On créé les "li" avec "listItem"
-
+       const listItem = document.createElement("li");
         // On ajoute "item" à nos "li"
-
+        listItem.innerText = item;
         // On rattache nos "li" à notre parent "taskList"
-  
-// --------------On ajoute de nouvelles tâches à notre list-------------------
+        taskList.appendChild(listItem);
+    })
+    }
 
-    // On met un élément d'écoute sur notre btn 
- 
-    // notre btn va récupérer la valeur de notre inputTask puis la nettoyer
+//----Ajout d'évenement sur la touche entrée quand on veut valider l'input------
 
-    // On ajoute une condition si notre input à un contenue 
-
-        // Si il y a du contenu, alors on ajoute à la liste 
-
-        // On met à jour la list à l'écran (voilà pourquoi on l'a déclaré avant)
-
-        // Enfin, on réinitialise l'input
-      
-        // par contre si notre input est vide
- 
+    // On crée la fonction qui ajoute un item à notre liste
+   function addItem () {
+    // on déclare la valeur de input Task dans une variable
+    const valueInputTask = inputTask.value.trim();
+    // on fait une boucle qui nous dit "si la valeur d'inputTask n'est pas vide"
+    if (valueInputTask !== ""){
+    // on ajoute la valeur à notre tableaux (parent) list
+        list.push(valueInputTask);
+    // on ajoute la list à l'écran
+        addListOnDisplay();
+    // on enlève notre valeur d'input
+        inputTask.value="";
+    // par contre, si la valeur est vide 
+    }else{
+        alert("Veuillez entrer une tâche avant de valider")
+    }
+   }
+   //Ajout du listener du bouton
+   taskBtn.addEventListener("click", addItem);
+   //ajout du listener de l'input
+   inputTask.addEventListener("keypress", (event) =>{
+    // condition si la touche est entré
+    if (event.key === "Enter") {
+    // appel à la fonction addItem
+        addItem();
+    // on vide la valeur de l'input
+        inputTask.value = "";
+    }
+   })
 //-----------------------------------------------------------------------------
 
 //on affiche la liste initiale au chargement de la page
+addListOnDisplay();
