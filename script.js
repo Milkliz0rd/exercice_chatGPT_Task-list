@@ -26,8 +26,7 @@ const taskBtn = document.querySelector("#addTaskBtn");
         // On ajoute "item" à nos "li"
 
         // On rattache nos "li" à notre parent "taskList"
-
-
+   
 //----Ajout d'évenement sur la touche entrée quand on veut valider l'input------
 
     // On crée la fonction qui ajoute un item à notre liste
@@ -44,12 +43,16 @@ const taskBtn = document.querySelector("#addTaskBtn");
 
     // par contre, si la valeur est vide 
 
+
+//-----------------------------------------------------------------------------
    //Ajout du listener du bouton
 
+
+//-----------------------------------------------------------------------------   
    //ajout du listener de l'input
 
     // condition si la touche est entré
-
+  
     // appel à la fonction addItem
 
     // on vide la valeur de l'input
